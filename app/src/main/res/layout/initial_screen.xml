@@ -70,6 +70,28 @@
             android:paddingLeft="10dp"
             />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:text="Esqueceu sua senha?"
+            android:layout_gravity="start"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:text="Fazer cadastro"
+            android:layout_gravity="end"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="-20dp"
+            />
+
         <Button
             android:layout_width="200dp"
             android:layout_height="50dp"
@@ -78,8 +100,9 @@
             android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="80dp"
             android:backgroundTint="#74FF7C"
+            android:onClick="enterMainScreen"
             />
 
     </LinearLayout>
