@@ -24,12 +24,12 @@ class InitialScreen : AppCompatActivity() {
 
 
     fun enterMainScreen(view: View){
-        val emailUser = findViewById<EditText>(R.id.emailUser).text.toString().trim();
+        val nameUser = findViewById<EditText>(R.id.nameUser).text.toString().trim();
         val passUser = findViewById<EditText>(R.id.passUser).text.toString().trim();
-        if(emailUser.isEmpty()){
+        if(nameUser.isEmpty()){
             val alert = AlertDialog.Builder(this)
                 .setTitle("Aviso")
-                .setMessage("Por favor, insira seu email.")
+                .setMessage("Por favor, insira seu nome de usuário.")
                 .setPositiveButton("Ok"){dialog, _ -> dialog.dismiss()}
                 .create()
 
@@ -46,6 +46,7 @@ class InitialScreen : AppCompatActivity() {
         }
         else{
             val intent =  Intent(this, MainScreen::class.java);
+            intent.putExtra("NAME_USER" , nameUser);
             startActivity(intent);
         }
     }

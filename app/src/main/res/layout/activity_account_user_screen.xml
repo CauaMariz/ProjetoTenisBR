@@ -5,9 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitialScreen">
+    android:background="#E4E4E4"
+    tools:context=".MainScreen">
 
-
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#545454"
+        app:title="TenisBR"
+        app:titleTextColor="#74FF7C"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
     <LinearLayout android:id="@+id/mainLayout"
         android:layout_width="400dp"
         android:layout_height="500dp"
@@ -20,15 +29,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         >
 
-        <TextView
+        <TextView android:id="@+id/textUserScreenWellcome"
             android:layout_width="wrap_content"
+            android:maxWidth="300dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="TenisBR!"
-            android:textColor="#4B4B4B"
-            android:textSize="70sp"
-            android:textStyle="bold"
             android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text=""
+            android:textColor="#4B4B4B"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.499"
@@ -36,17 +46,37 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <EditText android:id="@+id/nameUser"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Sua conta"
+            android:textColor="#4B4B4B"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            android:paddingLeft="45dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView android:id="@+id/campoNameUser"
             android:width="300dp"
             android:height="50dp"
-            android:inputType="textEmailAddress"
+            android:text="Seu nome de usuário:"
             android:textColorHint="@color/black"
             android:backgroundTint="@color/white"
             android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
+            android:gravity="start"
             android:background="@drawable/input_border_radius"
-            android:hint="Seu nome de usuário: "
             android:textSize="20sp"
             android:paddingLeft="10dp"
             />
@@ -54,57 +84,23 @@
 
 
 
-        <EditText
-            android:id="@+id/passUser"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/input_border_radius"
-            android:backgroundTint="@color/white"
-            android:ems="10"
-            android:hint="Sua senha: "
-            android:inputType="textPassword"
+        <TextView android:id="@+id/campoPassUser"
+            android:width="300dp"
+            android:height="50dp"
+            android:text="Sua senha:"
             android:textColorHint="@color/black"
-            android:textSize="20sp"
-            android:layout_marginTop="50dp"
-            android:paddingLeft="10dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="14sp"
-            android:text="Esqueceu sua senha?"
-            android:layout_gravity="start"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="14sp"
-            android:text="Fazer cadastro"
-            android:layout_gravity="end"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="-20dp"
-            />
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="Enviar"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:gravity="center"
+            android:backgroundTint="@color/white"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:backgroundTint="#74FF7C"
-            android:onClick="enterMainScreen"
+            android:gravity="start"
+            android:background="@drawable/input_border_radius"
+            android:textSize="20sp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
             />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

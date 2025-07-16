@@ -1,5 +1,6 @@
 package com.example.projetotenisbr
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -40,6 +41,11 @@ class MainScreen : AppCompatActivity() {
             }
             R.id.profile_menu -> {
                 Toast.makeText(this, "Sua conta", Toast.LENGTH_SHORT).show()
+
+                val nameUser = intent.getStringExtra("NAME_USER");
+                val intentUser = Intent(this , AccountUserScreen::class.java);
+                intentUser.putExtra("NAME_USER" , nameUser);
+                startActivity(intentUser);
                 true
             }
             R.id.carrinho_menu -> {
